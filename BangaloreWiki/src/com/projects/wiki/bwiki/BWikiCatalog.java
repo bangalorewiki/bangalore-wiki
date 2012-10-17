@@ -1,6 +1,5 @@
 package com.projects.wiki.bwiki;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -23,13 +22,7 @@ public class BWikiCatalog {
 	}
 
 	public String listSites(){
-		
-		HttpServletRequest req = ServletActionContext.getRequest();
-		System.out.println("Its good...");
-		
 		sightsList = BwikiTablesData.getRecords("Place.hbm.xml");
-		
-		req.setAttribute("sites", sightsList);
 		return "success";
 	}
 	

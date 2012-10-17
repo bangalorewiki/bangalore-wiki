@@ -44,7 +44,12 @@ body{
     right: 0;
     width: 800px;
 }
-#footer{}
+
+#footer1 {
+    clear: both;
+    content: ".";
+    height: 55px;
+}
 
 .header-section {
     background: none repeat scroll 0 0 #A5DF00;

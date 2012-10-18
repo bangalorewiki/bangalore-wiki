@@ -19,5 +19,8 @@
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>
+    <listener>
+        <listener-class>com.projects.wiki.bwiki.core.BWikiListener</listener-class>
+    </listener>
 
 </web-app>

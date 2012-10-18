@@ -10,24 +10,21 @@ import com.projects.wiki.bwiki.db.Place;
 import com.projects.wiki.bwiki.util.BwikiTablesData;
 
 public class Sites {
-	private List sitesList;
+	private List siteList;
 
-	public List<Place> getSightsList() {
-		System.out.println("its getting called...");
-		return sitesList;
+	public List getSiteList() {
+		return siteList;
 	}
-
-	public void setSightsList(List<Place> sightsList) {
-		this.sitesList = sightsList;
+	public void setSiteList(List siteList) {
+		this.siteList = siteList;
 	}
 
 	public String listSites(){
 		
 		System.out.println("Its good...");
 		
-		sitesList = BwikiTablesData.getRecords("Place.hbm.xml");
+		siteList = BwikiTablesData.getRecords("Place.hbm.xml");
 		
 		return "success";
 	}
-	
 }

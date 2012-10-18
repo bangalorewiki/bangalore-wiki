@@ -9,7 +9,6 @@
     <constant name="struts.devMode" value="false" />
 
     <package name="default" namespace="/" extends="struts-default">
-
         <global-results>
             <result name="error">/error.jsp</result>
         </global-results>
@@ -17,7 +16,6 @@
         <global-exception-mappings>
             <exception-mapping exception="java.lang.Exception" result="error"/>
         </global-exception-mappings>
-        
     </package>
 
     <include file="bwiki.xml"/>

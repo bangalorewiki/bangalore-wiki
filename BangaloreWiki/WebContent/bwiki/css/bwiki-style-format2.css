@@ -1,0 +1,135 @@
+@CHARSET "ISO-8859-1";
+body{
+	margin: 0;
+	background-color: #FAFAFA;
+	font-family: tahoma;
+	font-size: 10pt;
+}
+#menu {
+    height: 100%;
+    float: left;
+    width: 170px;
+}
+#menu ul{
+    cursor: pointer;
+    font-family: helvetica;
+    font-size: 10pt;
+    list-style-type: none;
+    margin: 15px 0 0;
+    padding-left: 0;
+}
+#menu ul li{
+	padding: 5px 5px 5px 15px;
+}
+.onmenu{
+	background: none repeat scroll 0 0 #ffffff;
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.52);
+}
+.onmenuover{
+	background: none repeat scroll 0 0 #ffffff;
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.52);
+}
+.bwiki-logo {
+    font-family: 'Lucida Grande';
+    font-size: 19pt;
+    font-weight: bold;
+    left: 0;
+    position: absolute;
+    width: 250px;
+}
+.bwiki-search {
+    position: absolute;
+    right: 0;
+    width: 300px;
+    padding-right: 15px;
+}
+.bwiki-input-search {
+    border: 1px solid green;
+    height: 17px;
+    margin-top: 6px;
+    width: 225px;
+}
+.search-field{
+}
+#header1 {
+    background: none repeat scroll 0 0 #A5DF00;
+    border-bottom: 1px solid #D0FA58;
+    height: 55px;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.52);
+}
+#content1 {
+    margin: auto;
+    min-height: 500px;
+    padding: 3px 0;
+    width: 1024px;
+}
+#footer{
+    clear: both;
+    content: ".";
+    height: 55px;
+}
+.head{
+	height: 50px;
+    margin: auto;
+    width: 1024px;
+    position: relative;
+}
+#content-section{
+	float: left;
+	min-height: 500px;
+	border-left: 1px ridge rgba(0, 0, 0, 0.52);
+	border-right: 1px ridge rgba(0, 0, 0, 0.2);
+	border-bottom: 1px ridge rgba(0, 0, 0, 0.2);
+	width: 820px;
+    background: none repeat scroll 0 0 #ffffff;
+    text-align: center;
+}
+.copyrightcss {
+    color: rgba(0, 0, 0, 0.52);
+    font-family: verdana;
+    font-size: 8pt;
+    margin: auto;
+    text-align: right;
+    width: 900px;
+}
+.whitetext{
+	color: #FFFFFF;
+    padding-top: 4px;
+}
+.bwiki-content-pad{
+	padding: 20px 5;
+}
+.bwiki-cell{
+	height: 20px;
+	text-align: left;
+}
+.records{
+    background: none repeat scroll 0 0 white;
+    border-bottom: 1px solid grey;
+    margin: 10px;
+}
+.records-header {
+    font-family: verdana;
+    font-size: 11pt;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+}
+.records-table {
+    margin: auto;
+    font-size: 10pt;
+    padding: 10px 0;
+}
+.records-cell-label{
+	color: #006600;
+    font-family: verdana;
+    text-align: right;
+}
+.records-cell-value{
+	color: #797979;
+    font-family: verdana;
+    text-align: left;
+}

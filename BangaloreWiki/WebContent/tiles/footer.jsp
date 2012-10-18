@@ -1,1 +1,3 @@
-<h1>This is a footer</h1>
+<div id="footer">
+	<div class="copyrightcss">Contact Us | Disclaimer | BangaloreWiki  © 2012</div>
+</div>

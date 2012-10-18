@@ -12,9 +12,7 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
     <listener>
-        <listener-class>
-            org.apache.struts2.tiles.StrutsTilesListener
-        </listener-class>
+        <listener-class>org.apache.struts2.tiles.StrutsTilesListener</listener-class>
     </listener>
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
@@ -22,5 +20,4 @@
     <listener>
         <listener-class>com.projects.wiki.bwiki.core.BWikiListener</listener-class>
     </listener>
-
 </web-app>

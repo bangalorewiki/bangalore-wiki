@@ -5,19 +5,22 @@
 
 <struts>
     <package name="bwiki" namespace="/bwiki" extends="tiles-default">
-        <action name="tiless">
-            <result type="tiles">bwiki.index</result>
+        <!-- Use this for home page -->
+        <action name="search" method="listSites" class="com.projects.wiki.bwiki.BWikiCatalog">
+            <result name="success" type="tiles">bwiki.sites</result>
         </action>
-        <action name="search" method="listSites" class="com.projects.wiki.bwiki.Sites">
-            <result name="success" type="tiles">bwiki.search.sights</result>
-        </action>
-        <action name="edu-institutions" method="listSites" class="com.projects.wiki.bwiki.Sites">
+        
+        <!-- These pages just replace the  body content -->
+        <action name="edu-institutions" method="listSites" class="com.projects.wiki.bwiki.BWikiCatalog">
             <result name="success">/pages/user/edu-institutions/list-edu-institutions.jsp</result>
         </action>
-        <action name="sites" method="listSites" class="com.projects.wiki.bwiki.Sites">
+        <action name="sites" method="listSites" class="com.projects.wiki.bwiki.BWikiCatalog">
             <result name="success">/pages/user/sites/list-sites.jsp</result>
         </action>
-        <action name="search-all" method="searchAll" class="com.projects.wiki.bwiki.SearchAction">
+        <action name="theatres" method="listTheatres" class="com.projects.wiki.bwiki.BWikiCatalog">
+            <result name="success">/pages/user/theatres/list-theatres.jsp</result>
+        </action>
+        <action name="search-all" method="listSearchRecords" class="com.projects.wiki.bwiki.BWikiCatalog">
             <result name="success">/pages/user/search/search-all.jsp</result>
         </action>
     </package>

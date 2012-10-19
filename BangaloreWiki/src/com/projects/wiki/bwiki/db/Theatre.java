@@ -7,7 +7,7 @@ package com.projects.wiki.bwiki.db;
  * @author ntallapa
  *
  */
-public class Theatre {
+public class Theatre extends ParentData{
 	
 	private int no;
 	private String name;
@@ -17,6 +17,12 @@ public class Theatre {
 	private String contact_person; 
 	private String rating; 
 	private String language;
+	
+	public String getCategory() {
+		this.category = "Movie Theatres";
+		return category;
+	}
+	
 	/**
 	 * @return the no
 	 */

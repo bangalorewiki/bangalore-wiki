@@ -7,10 +7,10 @@ package com.projects.wiki.bwiki.db;
  * @author ntallapa
  *
  */
-public class Place {
+public class Place extends ParentData{
 	
 	private int no;
-	private String place;
+	private String name;
 	private String rating;
 	private String type;
 	private int dist; 
@@ -29,25 +29,30 @@ public class Place {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Place(String place, String rating, String type) {
+	public Place(String name, String rating, String type) {
 		super();
 		
-		this.place = place;
+		this.name = name;
 		this.rating = rating;
 		this.type = type;
+	}
+	
+	public String getCategory() {
+		this.category = "Site Seeing";
+		return category;
 	}
 	
 	/**
 	 * @return the place
 	 */
-	public String getPlace() {
-		return place;
+	public String getName() {
+		return name;
 	}
 	/**
 	 * @param place the place to set
 	 */
-	public void setPlace(String place) {
-		this.place = place;
+	public void setName(String place) {
+		this.name = place;
 	}
 	/**
 	 * @return the rating

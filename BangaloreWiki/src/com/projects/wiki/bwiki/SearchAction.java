@@ -51,7 +51,7 @@ public class SearchAction {
 				IndexWriter iwriter = new IndexWriter(dir, config);
 
 				Document doc = null;
-				List allPlaces = BwikiTablesData.getRecords("Place.hbm.xml");
+				List allPlaces = BwikiTablesData.getRecords("Place");
 				
 				for (Object obj : allPlaces) {
 					Place place = (Place) obj;
@@ -60,10 +60,10 @@ public class SearchAction {
 					doc.add(new Field("site_id", ""+place.getNo(),
 							TextField.TYPE_STORED));
 					
-					if (place.getPlace().equals(""))
-						place.setPlace("NA");
-					doc.add(new Field("site_name", place.getPlace(),
-							TextField.TYPE_STORED));
+//					if (place.getPlace().equals(""))
+//						place.setPlace("NA");
+//					doc.add(new Field("site_name", place.getPlace(),
+//							TextField.TYPE_STORED));
 
 					if (place.getType().equals(""))
 						place.setType("NA");

@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.projects.wiki.bwiki.util;
 
 import java.util.List;

@@ -8,7 +8,7 @@
             <column name="no" />
             <generator class="assigned" />
         </id>
-        <property name="place" type="java.lang.String">
+        <property name="name" type="java.lang.String">
             <column name="place" />
         </property>
         <property name="type" type="java.lang.String">

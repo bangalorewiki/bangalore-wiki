@@ -24,6 +24,7 @@ import com.projects.wiki.bwiki.db.Place;
 import com.projects.wiki.bwiki.util.BwikiTablesData;
 
 public class SearchAction {
+	
 	private String searchFor;
 
 	public String getSearchFor() {

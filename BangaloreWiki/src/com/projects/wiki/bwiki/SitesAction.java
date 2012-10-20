@@ -9,7 +9,7 @@ import org.apache.struts2.ServletActionContext;
 import com.projects.wiki.bwiki.db.Place;
 import com.projects.wiki.bwiki.util.BwikiTablesData;
 
-public class Sites {
+public class SitesAction {
 	private List siteList;
 
 	public List getSiteList() {

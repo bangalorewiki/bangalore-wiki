@@ -29,7 +29,6 @@ public class BWikiCatalog {
 	private static Directory luceneDir = null;
 
 	public List<ParentData> getSitesList() {
-		System.out.println("its getting called...");
 		return sitesList;
 	}
 

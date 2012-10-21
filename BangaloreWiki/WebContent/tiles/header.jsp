@@ -8,7 +8,7 @@
 	});
 </script>
 
-<div id="header1">
+<div id="header1" >
 	<div class="head">
 		<div class="copyrightcss whitetext">About Us | Settings | Feedback</div>
 		<div class="bwiki-logo">BangaloreWiki</div>

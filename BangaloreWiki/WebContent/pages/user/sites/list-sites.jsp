@@ -4,6 +4,20 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ taglib uri="http://displaytag.sf.net" prefix="display"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+	<link rel="stylesheet" href="css/custom-theme/jquery-ui-1.9.0.custom.css" />
+    <script src="script/jquery-ui-1.9.0.custom.min.js"></script>
+    
+    <script>
+    $(function() {
+        $( "#format" ).buttonset();
+    });
+    </script>
+    
+	<div id="format">
+        <input type="radio" id="radio1" name="radio" /><label for="radio1">Nearest First</label>
+        <input type="radio" id="radio2" name="radio" checked="checked" /><label for="radio2">Popular</label>
+        <input type="radio" id="radio3" name="radio" /><label for="radio3">Type</label>
+    </div>
 <c:forEach var="site" items="${siteList}">
 	<div class="records">
 		<p class="records-header">${site.name}</p>

@@ -5,10 +5,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Welcome to BangaloreWiki</title>
-	<link type="text/css" href="css/bwiki-style-format2.css" rel="stylesheet" />
+	<link type="text/css" href="../css/bwiki-style-format2.css" rel="stylesheet" />
+	<link type="text/css" href="../css/custom-theme/jquery-ui-1.9.0.custom.css" rel="stylesheet" />
 	<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
 	<%@ taglib prefix="s" uri="/struts-tags"%>
-	<script src="script/jquery-1.7.min.js"></script>
+	<script src="../script/jquery-1.7.min.js"></script>
+    <script src="../script/jquery-ui-1.9.0.custom.min.js"></script>
 </head>
 <body>
 	<script type="text/javascript">

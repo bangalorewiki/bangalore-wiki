@@ -4,35 +4,49 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ taglib uri="http://displaytag.sf.net" prefix="display"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-	<link rel="stylesheet" href="css/custom-theme/jquery-ui-1.9.0.custom.css" />
-    <script src="script/jquery-ui-1.9.0.custom.min.js"></script>
-    
-    <script>
+    <style type="text/css">
+    	#format{
+    		border-bottom: 1px solid #7FBB07;
+    		text-align: left;
+    	}
+    	#sites-form{
+    		padding: 20px 0;
+    	}
+    </style>
+    <script src="../script/jquery-ui-1.9.0.custom.min.js"></script>
+	<link type="text/css" href="../css/custom-theme/jquery-ui-1.9.0.custom.css" rel="stylesheet" />
+    <script type="text/javascript">
     $(function() {
-        $( "#format" ).buttonset();
+        $("#search-submit1").button();
+
+        $("#format").buttonset();
+        $("#records-section").load("bwiki/sites/display");
+
+        $("#format input").click(function(){
+        	$("#records-section").load("bwiki/sites/"+$(this).attr("id"));
+        });
     });
     </script>
     
+ <div id="sites-form">
+ 	<p class="records-header">Travel Places in Karnataka</p>
+	<table class="records-table">
+		<tr><td class="records-cell-label">Name :</td><td class="records-cell-value"><input id="search" type="text" class="bwiki-input-search"/></td>
+		<tr><td class="records-cell-label">Place Type :</td><td class="records-cell-value"><input id="search" type="text" class="bwiki-input-search"/></td>
+		<tr><td class="records-cell-label">With-In :</td><td class="records-cell-value"><input id="search" type="text" class="bwiki-input-search"/></td>
+		<tr><td class="records-cell-label">Period-From :</td><td class="records-cell-value"><input id="search" type="text" class="bwiki-input-search"/></td>
+		<tr><td class="records-cell-label">Period-To :</td><td class="records-cell-value"><input id="search" type="text" class="bwiki-input-search"/></td>
+		<tr><td><td style="text-align: right;"><input value="Filter" id="search-submit1" type="button" class="bwiki-search-submit"/>
+	</table>
+   </div>
+
+    
 	<div id="format">
-        <input type="radio" id="radio1" name="radio" /><label for="radio1">Nearest First</label>
-        <input type="radio" id="radio2" name="radio" checked="checked" /><label for="radio2">Popular</label>
-        <input type="radio" id="radio3" name="radio" /><label for="radio3">Type</label>
+        <input type="radio" id="nearest" name="radio" /><label for="nearest">Nearest First</label>
+        <input type="radio" id="popular" name="radio" checked="checked" /><label for="popular">Popular</label>
+        <input type="radio" id="type" name="radio" /><label for="type">Type</label>
     </div>
-<c:forEach var="site" items="${siteList}">
-	<div class="records">
-		<p class="records-header">${site.name}</p>
-		<table class="records-table">
-			<tr><td class="records-cell-label">Road :</td><td class="records-cell-value">${site.road}</td>
-				<td class="records-cell-label">Place Type :</td><td class="records-cell-value">${site.type}</td>
-				<td class="records-cell-label">Food :</td><td class="records-cell-value">${site.food}</td>
-			<tr><td class="records-cell-label">Distance :</td><td class="records-cell-value">${site.dist}</td>
-				<td class="records-cell-label">Lodge :</td><td class="records-cell-value">${site.lodge}</td>
-				<td class="records-cell-label">Direction :</td><td class="records-cell-value">${site.direction}</td>
-			<tr><td class="records-cell-label">Petrol :</td><td class="records-cell-value">${site.petrol}</td>
-				<td class="records-cell-label">Remarks :</td><td class="records-cell-value">${site.remarks}</td>
-				<td class="records-cell-label">Period From :</td><td class="records-cell-value">${site.from_period}</td>
-			<tr><td class="records-cell-label">Period To :</td><td class="records-cell-value">${site.to_period}</td>
-				<td class="records-cell-label">Days Required :</td><td class="records-cell-value">${site.days_reqd}</td>
-		</table>
+   
+	<div id="records-section">
 	</div>
-</c:forEach>
+

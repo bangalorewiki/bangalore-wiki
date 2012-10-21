@@ -5,11 +5,6 @@
 
 <struts>
     <package name="bwiki" namespace="/bwiki" extends="tiles-default">
-        <!-- Use this for home page -->
-        <action name="search" method="listSites" class="searchAction">
-            <result name="success" type="tiles">bwiki.sites</result>
-        </action>
-        
         <!-- These pages just replace the  body content -->
         <action name="edu-institutions" method="listSites" class="com.projects.wiki.bwiki.BWikiCatalog">
             <result name="success">/pages/user/edu-institutions/list-edu-institutions.jsp</result>
@@ -22,6 +17,25 @@
         </action>
         <action name="search-all" method="listSearchRecords" class="com.projects.wiki.bwiki.BWikiCatalog">
             <result name="success">/pages/user/search/search-all.jsp</result>
+        </action>
+    </package>
+    
+    <package name="sites" namespace="/bwiki/sites" extends="tiles-default">
+        
+        <action name="search" method="listSites" class="searchAction">
+            <result name="success" type="tiles">bwiki.sites</result>
+        </action>
+        <action name="nearest" method="orderByDistance" class="searchAction">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="popular" method="orderByRating" class="searchAction">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="type" method="orderByPlaceType" class="searchAction">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="display" method="display" class="searchAction">
+            <result name="success">/pages/user/sites/list-sites-records.jsp</result>
         </action>
     </package>
 </struts>

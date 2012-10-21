@@ -6,7 +6,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <c:forEach var="site" items="${siteList}">
 	<div class="records">
-		<p class="records-header">${site.place}</p>
+		<p class="records-header">${site.name}</p>
 		<table class="records-table">
 			<tr><td class="records-cell-label">Road :</td><td class="records-cell-value">${site.road}</td>
 				<td class="records-cell-label">Place Type :</td><td class="records-cell-value">${site.type}</td>

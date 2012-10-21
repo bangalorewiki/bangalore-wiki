@@ -2,14 +2,10 @@ package com.projects.wiki.bwiki;
 
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-
-import org.apache.struts2.ServletActionContext;
-
-import com.projects.wiki.bwiki.db.Place;
 import com.projects.wiki.bwiki.util.BwikiTablesData;
 
 public class SitesAction {
+	
 	private List siteList;
 
 	public List getSiteList() {
@@ -23,7 +19,7 @@ public class SitesAction {
 		
 		System.out.println("Its good...");
 		
-		siteList = BwikiTablesData.getRecords("Place.hbm.xml");
+		siteList = BwikiTablesData.getRecords("Place");
 		
 		return "success";
 	}

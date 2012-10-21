@@ -6,7 +6,7 @@
 <struts>
     <package name="bwiki" namespace="/bwiki" extends="tiles-default">
         <!-- Use this for home page -->
-        <action name="search" method="listSites" class="com.projects.wiki.bwiki.BWikiCatalog">
+        <action name="search" method="listSites" class="searchAction">
             <result name="success" type="tiles">bwiki.sites</result>
         </action>
         

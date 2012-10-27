@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="bwiki" namespace="/bwiki" extends="tiles-default">
+    	<!-- This is home page -->
+    	<action name="home" method="listSites" class="com.projects.wiki.bwiki.BWikiCatalog">
+            <result name="success" type="tiles">bwiki.home</result>
+        </action>
+        <!-- These pages just replace the  body content -->
+        <action name="edu-institutions" method="listSites" class="com.projects.wiki.bwiki.BWikiCatalog">
+            <result name="success">/pages/user/edu-institutions/list-edu-institutions.jsp</result>
+        </action>
+        <action name="sites" method="listSites" class="com.projects.wiki.bwiki.BWikiCatalog">
+            <result name="success">/pages/user/sites/list-sites.jsp</result>
+        </action>
+        <action name="theatres" method="listTheatres" class="com.projects.wiki.bwiki.BWikiCatalog">
+            <result name="success">/pages/user/theatres/list-theatres.jsp</result>
+        </action>
+        <action name="search-all" method="listSearchRecords" class="com.projects.wiki.bwiki.BWikiCatalog">
+            <result name="success">/pages/user/search/search-all.jsp</result>
+        </action>
+    </package>
+    
+    <package name="sites" namespace="/bwiki/sites" extends="tiles-default">
+        
+        <action name="search" method="listSites" class="searchAction">
+            <result name="success" type="tiles">bwiki.sites</result>
+        </action>
+        <action name="demo" method="listSites" class="searchAction">
+            <result name="success">/pages/user/sites/list-sites.jsp</result>
+        </action>
+        <action name="nearest" method="orderByDistance" class="searchAction">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="popular" method="orderByRating" class="searchAction">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="type" method="orderByPlaceType" class="searchAction">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="display" method="display" class="searchAction">
+            <result name="success">/pages/user/sites/list-sites-records.jsp</result>
+        </action>
+    </package>
+    
+    <package name="theatres" namespace="/bwiki/theatres" extends="tiles-default">
+        
+        <action name="search" method="listSites" class="theatreActions">
+            <result name="success" type="tiles">bwiki.theatres</result>
+        </action>
+        <action name="demo" method="listSites" class="theatreActions">
+            <result name="success">/pages/user/theatres/list-theatres.jsp</result>
+        </action>
+        <action name="nearest" method="orderByDistance" class="theatreActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="popular" method="orderByRating" class="theatreActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="type" method="orderByPlaceType" class="theatreActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="display" method="display" class="theatreActions">
+            <result name="success">/pages/user/theatres/list-theatres-records.jsp</result>
+        </action>
+    </package>
+    
+    <package name="discos" namespace="/bwiki/discos" extends="tiles-default">
+        
+        <action name="search" method="listSites" class="discosAction">
+            <result name="success" type="tiles">bwiki.sites</result>
+        </action>
+        <action name="demo" method="listSites" class="discosAction">
+            <result name="success">/pages/user/discos/list-discos.jsp</result>
+        </action>
+        <action name="nearest" method="orderByDistance" class="discosAction">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="popular" method="orderByRating" class="discosAction">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="type" method="orderByPlaceType" class="discosAction">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="display" method="display" class="discosAction">
+            <result name="success">/pages/user/discos/list-discos-records.jsp</result>
+        </action>
+    </package>
+    
+    <package name="edu-institutions" namespace="/bwiki/edu-institutions" extends="tiles-default">
+        <action name="demo">
+            <result>/pages/user/edu-institutions/list-edu-institutions.jsp</result>
+        </action>
+    </package>
+    
+    <package name="parlor" namespace="/bwiki/parlors" extends="tiles-default">
+        
+        <action name="demo" method="listSites" class="beautyParlorActions">
+            <result name="success">/pages/user/parlors/list-parlors.jsp</result>
+        </action>
+        <action name="nearest" method="orderByDistance" class="beautyParlorActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="popular" method="orderByRating" class="beautyParlorActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="type" method="orderByPlaceType" class="beautyParlorActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="display" method="display" class="beautyParlorActions">
+            <result name="success">/pages/user/parlors/list-parlors-records.jsp</result>
+        </action>
+    </package>
+    
+    <package name="bowling-alley" namespace="/bwiki/bowling-alleys" extends="tiles-default">
+        
+        <action name="demo" method="listSites" class="bowlingAlleyActions">
+            <result name="success">/pages/user/bowling-alleys/list-bowling-alleys.jsp</result>
+        </action>
+        <action name="nearest" method="orderByDistance" class="bowlingAlleyActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="popular" method="orderByRating" class="bowlingAlleyActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="type" method="orderByPlaceType" class="bowlingAlleyActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="display" method="display" class="bowlingAlleyActions">
+            <result name="success">/pages/user/bowling-alleys/list-bowling-alleys-records.jsp</result>
+        </action>
+    </package>
+	
+	<package name="club" namespace="/bwiki/clubs" extends="tiles-default">
+        
+        <action name="demo" method="listSites" class="clubActions">
+            <result name="success">/pages/user/clubs/list-clubs.jsp</result>
+        </action>
+        <action name="nearest" method="orderByDistance" class="clubActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="popular" method="orderByRating" class="clubActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="type" method="orderByPlaceType" class="clubActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="display" method="display" class="clubActions">
+            <result name="success">/pages/user/clubs/list-clubs-records.jsp</result>
+        </action>
+    </package>
+
+	<package name="coffee-bar" namespace="/bwiki/coffee-bars" extends="tiles-default">
+        <action name="demo" method="listSites" class="coffeeBarActions">
+            <result name="success">/pages/user/coffee-bars/list-coffee-bars.jsp</result>
+        </action>
+        <action name="nearest" method="orderByDistance" class="coffeeBarActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="popular" method="orderByRating" class="coffeeBarActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="type" method="orderByPlaceType" class="coffeeBarActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="display" method="display" class="coffeeBarActions">
+            <result name="success">/pages/user/coffee-bars/list-coffee-bars-records.jsp</result>
+        </action>
+    </package>
+
+	<package name="fast-food" namespace="/bwiki/fast-foods" extends="tiles-default">
+        <action name="demo" method="listSites" class="fastFoodActions">
+            <result name="success">/pages/user/coffee-bars/list-fast-foods.jsp</result>
+        </action>
+        <action name="nearest" method="orderByDistance" class="fastFoodActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="popular" method="orderByRating" class="fastFoodActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="type" method="orderByPlaceType" class="fastFoodActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="display" method="display" class="fastFoodActions">
+            <result name="success">/pages/user/fast-foods/list-fast-foods-records.jsp</result>
+        </action>
+    </package>
+    
+	<package name="pool-parlor" namespace="/bwiki/pool-parlors" extends="tiles-default">
+        <action name="demo" method="listSites" class="poolParlorActions">
+            <result name="success">/pages/user/pool-parlors/list-pool-parlors.jsp</result>
+        </action>
+        <action name="nearest" method="orderByDistance" class="poolParlorActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="popular" method="orderByRating" class="poolParlorActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="type" method="orderByPlaceType" class="poolParlorActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="display" method="display" class="poolParlorActions">
+            <result name="success">/pages/user/pool-parlors/list-pool-parlors-records.jsp</result>
+        </action>
+    </package>
+    
+	<package name="pizza-joint" namespace="/bwiki/pizza-joints" extends="tiles-default">
+        <action name="demo" method="listSites" class="pizzaJointActions">
+            <result name="success">/pages/user/pizza-joints/list-pizza-joints.jsp</result>
+        </action>
+        <action name="nearest" method="orderByDistance" class="pizzaJointActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="popular" method="orderByRating" class="pizzaJointActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="type" method="orderByPlaceType" class="pizzaJointActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="display" method="display" class="pizzaJointActions">
+            <result name="success">/pages/user/pizza-joints/list-pizza-joints-records.jsp</result>
+        </action>
+    </package>
+    
+	<package name="pub" namespace="/bwiki/pubs" extends="tiles-default">
+        <action name="demo" method="listSites" class="pubActions">
+            <result name="success">/pages/user/pubs/list-pubs.jsp</result>
+        </action>
+        <action name="nearest" method="orderByDistance" class="pubActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="popular" method="orderByRating" class="pubActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="type" method="orderByPlaceType" class="pubActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="display" method="display" class="pubActions">
+            <result name="success">/pages/user/pubs/list-pubs-records.jsp</result>
+        </action>
+    </package>
+	
+	<package name="restaurent" namespace="/bwiki/restaurants" extends="tiles-default">
+        <action name="demo" method="listSites" class="restaurentActions">
+            <result name="success">/pages/user/restaurants/list-restaurants.jsp</result>
+        </action>
+        <action name="nearest" method="orderByDistance" class="restaurentActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="popular" method="orderByRating" class="restaurentActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="type" method="orderByPlaceType" class="restaurentActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="display" method="display" class="restaurentActions">
+            <result name="success">/pages/user/restaurants/list-restaurants-records.jsp</result>
+        </action>
+    </package>
+</struts>

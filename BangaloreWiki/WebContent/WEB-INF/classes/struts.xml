@@ -16,6 +16,6 @@
         </global-exception-mappings>
     </package>
 
-    <include file="bwiki.xml"/>
+    <include file="struts-bwiki.xml"/>
     
 </struts>

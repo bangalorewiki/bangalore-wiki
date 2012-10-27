@@ -6,16 +6,16 @@
 <struts>
     <package name="bwiki" namespace="/bwiki" extends="tiles-default">
         <!-- These pages just replace the  body content -->
-        <action name="edu-institutions" method="listSites" class="com.projects.wiki.bwiki.BWikiCatalog">
+        <action name="edu-institutions" method="listSites" class="bwikiCatalog">
             <result name="success">/pages/user/edu-institutions/list-edu-institutions.jsp</result>
         </action>
-        <action name="sites" method="listSites" class="com.projects.wiki.bwiki.BWikiCatalog">
+        <action name="sites" method="listSites" class="bwikiCatalog">
             <result name="success">/pages/user/sites/list-sites.jsp</result>
         </action>
-        <action name="theatres" method="listTheatres" class="com.projects.wiki.bwiki.BWikiCatalog">
+        <action name="theatres" method="listTheatres" class="bwikiCatalog">
             <result name="success">/pages/user/theatres/list-theatres.jsp</result>
         </action>
-        <action name="search-all" method="listSearchRecords" class="com.projects.wiki.bwiki.BWikiCatalog">
+        <action name="search-all" method="listSearchRecords" class="bwikiCatalog">
             <result name="success">/pages/user/search/search-all.jsp</result>
         </action>
     </package>
@@ -36,6 +36,28 @@
         </action>
         <action name="display" method="display" class="searchAction">
             <result name="success">/pages/user/sites/list-sites-records.jsp</result>
+        </action>
+    </package>
+    
+    <package name="theatres" namespace="/bwiki/theatres" extends="tiles-default">
+        
+        <action name="search" method="listSites" class="theatreActions">
+            <result name="success" type="tiles">bwiki.theatres</result>
+        </action>
+        <action name="demo" method="listSites" class="theatreActions">
+            <result name="success">/pages/user/theatres/list-theatres.jsp</result>
+        </action>
+        <action name="nearest" method="orderByDistance" class="theatreActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="popular" method="orderByRating" class="theatreActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="type" method="orderByPlaceType" class="theatreActions">
+            <result name="success" type="redirect">display</result>
+        </action>
+        <action name="display" method="display" class="theatreActions">
+            <result name="success">/pages/user/theatres/list-theatres-records.jsp</result>
         </action>
     </package>
 </struts>

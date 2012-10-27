@@ -3,6 +3,17 @@
 
 <beans>
  
+ 	<bean id="bwikiCatalog" class="com.projects.wiki.bwiki.BWikiCatalog"/>
  	<bean id="searchAction" class="com.projects.wiki.bwiki.SitesAction"/>
- 
+ 	<bean id="theatreActions" class="com.projects.wiki.bwiki.TheatreActions"/>
+ 	<bean id="beautyParlorActions" class="com.projects.wiki.bwiki.BeautyParlorActions"/>
+ 	<bean id="bowlingAlleyActions" class="com.projects.wiki.bwiki.BowlingAlleyActions"/>
+ 	<bean id="clubActions" class="com.projects.wiki.bwiki.ClubActions"/>
+ 	<bean id="coffeeBarActions" class="com.projects.wiki.bwiki.CoffeeBarActions"/>
+ 	<bean id="discosActions" class="com.projects.wiki.bwiki.DiscosActions"/>
+ 	<bean id="fastFoodActions" class="com.projects.wiki.bwiki.FastFoodActions"/>
+ 	<bean id="pizzaJointActions" class="com.projects.wiki.bwiki.PizzaJointActions"/>
+ 	<bean id="pubActions" class="com.projects.wiki.bwiki.PubActions"/>
+ 	<bean id="restaurentActions" class="com.projects.wiki.bwiki.RestaurentActions"/>
+ 	<bean id="poolParlorActions" class="com.projects.wiki.bwiki.PoolParlorActions"/>
 </beans>

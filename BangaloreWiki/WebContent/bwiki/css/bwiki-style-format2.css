@@ -112,10 +112,6 @@ body{
 	height: 20px;
 	text-align: left;
 }
-.records{
-    background: none repeat scroll 0 0 white;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
 #menu {
     height: 100%;
     float: left;
@@ -199,8 +195,9 @@ body{
 }
 .records{
     background: none repeat scroll 0 0 white;
-    border-bottom: 1px solid grey;
-    margin: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin: 8px;
 }
 .records-header {
     font-family: verdana;
@@ -211,7 +208,7 @@ body{
 }
 .records-table {
     margin: auto;
-    font-size: 10pt;
+    font-size: 9pt;
     padding: 10px 0;
 }
 .records-cell-label{
@@ -223,4 +220,16 @@ body{
 	color: #797979;
     font-family: verdana;
     text-align: left;
+}
+.record-side-option{
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.sm-fb{
+	width: 30px;
 }

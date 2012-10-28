@@ -20,7 +20,7 @@
     </script>
     
 	<div id="pizza-joints-form">
-	<p class="records-header">Movie Theatres</p>
+	<p class="records-header">Pizza-Joints in Bangalore</p>
 	<table class="records-table">
 		<tr><td class="records-cell-label">Name :</td><td class="records-cell-value"><input id="search" type="text" class="bwiki-input-search"/></td>
 		<tr><td class="records-cell-label">Pincode :</td><td class="records-cell-value"><input id="search" type="text" class="bwiki-input-search"/></td>

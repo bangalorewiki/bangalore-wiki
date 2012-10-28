@@ -69,23 +69,19 @@
     </package>
     
     <package name="discos" namespace="/bwiki/discos" extends="tiles-default">
-        
-        <action name="search" method="listSites" class="discosAction">
-            <result name="success" type="tiles">bwiki.sites</result>
-        </action>
-        <action name="demo" method="listSites" class="discosAction">
+        <action name="demo" method="listSites" class="discosActions">
             <result name="success">/pages/user/discos/list-discos.jsp</result>
         </action>
-        <action name="nearest" method="orderByDistance" class="discosAction">
+        <action name="nearest" method="orderByDistance" class="discosActions">
             <result name="success" type="redirect">display</result>
         </action>
-        <action name="popular" method="orderByRating" class="discosAction">
+        <action name="popular" method="orderByRating" class="discosActions">
             <result name="success" type="redirect">display</result>
         </action>
-        <action name="type" method="orderByPlaceType" class="discosAction">
+        <action name="type" method="orderByPlaceType" class="discosActions">
             <result name="success" type="redirect">display</result>
         </action>
-        <action name="display" method="display" class="discosAction">
+        <action name="display" method="display" class="discosActions">
             <result name="success">/pages/user/discos/list-discos-records.jsp</result>
         </action>
     </package>
@@ -173,7 +169,7 @@
 
 	<package name="fast-food" namespace="/bwiki/fast-foods" extends="tiles-default">
         <action name="demo" method="listSites" class="fastFoodActions">
-            <result name="success">/pages/user/coffee-bars/list-fast-foods.jsp</result>
+            <result name="success">/pages/user/fast-foods/list-fast-foods.jsp</result>
         </action>
         <action name="nearest" method="orderByDistance" class="fastFoodActions">
             <result name="success" type="redirect">display</result>

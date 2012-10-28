@@ -18,7 +18,7 @@ public class PubActions {
 
 	public String listSites(){
 		pubList = BwikiTablesData.getRecords("Pub");
-		System.out.println("Its good..."+pubList.size());
+		System.out.println("Its good...(Pub) "+pubList.size());
 		
 		return "success";
 	}

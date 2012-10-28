@@ -43,14 +43,15 @@ body{
 .bwiki-search {
     position: absolute;
     right: 0;
-    width: 300px;
+    width: 250px;
     padding-right: 15px;
 }
 .bwiki-input-search {
     border: 1px solid green;
     height: 17px;
     margin-top: 6px;
-    width: 225px;
+    width: 100%;
+    border-radius: 10px 10px 10px 10px;
 }
 .search-field{
 }
@@ -143,18 +144,6 @@ body{
     left: 0;
     position: absolute;
     width: 250px;
-}
-.bwiki-search {
-    position: absolute;
-    right: 0;
-    width: 300px;
-    padding-right: 15px;
-}
-.bwiki-input-search {
-    border: 1px solid green;
-    height: 17px;
-    margin-top: 6px;
-    width: 225px;
 }
 .search-field{
 }

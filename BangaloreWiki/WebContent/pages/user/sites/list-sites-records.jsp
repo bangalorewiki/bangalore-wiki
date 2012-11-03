@@ -34,9 +34,9 @@
 	</table>
 	<div class="record-side-option">
 		<img id="sm-fb" class="sm-fb" alt="Post on Facebook" src="../images/facebook-logo-square.png">
-		<img id="sm-fb" class="sm-fb" alt="Add to favorites" src="../images/diglog-square.png">
-		<img id="sm-fb" class="sm-fb" alt="Send to a friend" src="../images/gmail-logo-square2.png">
-		<img id="sm-fb" class="sm-fb" alt="Tweet" src="../images/twitter-logo-square.png">
+		<img id="sm-fv" class="sm-fb" alt="Add to favorites" src="../images/diglog-square.png">
+		<img id="sm-gm" class="sm-fb" alt="Send to a friend" src="../images/gmail-logo-square2.png">
+		<img id="sm-tw" class="sm-fb" alt="Tweet" src="../images/twitter-logo-square.png">
 	</div>
 </div>
 </c:forEach>

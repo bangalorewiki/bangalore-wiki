@@ -10,6 +10,11 @@ public class PizzaJoint extends ParentData{
 	private String contact;
 	private int capacity;
 	private String rating;
+	
+	public PizzaJoint() {
+		this.category = "Pizza Points";
+	}
+	
 	public int getNo() {
 		return no;
 	}

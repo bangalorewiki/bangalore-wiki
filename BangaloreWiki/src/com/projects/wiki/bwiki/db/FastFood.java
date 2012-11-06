@@ -13,6 +13,11 @@ public class FastFood extends ParentData{
 	private String rating;
 	private int footfalls;
 	private String contactPerson;
+	
+	public FastFood() {
+		this.category = "Fast Food Centers";
+	}
+	
 	public int getNo() {
 		return no;
 	}

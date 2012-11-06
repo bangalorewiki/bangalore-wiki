@@ -1,13 +1,31 @@
 package com.projects.wiki.bwiki;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import com.projects.wiki.bwiki.util.BwikiTablesData;
 
 public class SitesAction {
 	
 	private List siteList;
-
+	
+	private static Set<String> searchableFields = new HashSet<String>();
+	
+	/**
+	 * @return the searchableFields
+	 */
+	public static Set<String> getSearchableFields() {
+		return searchableFields;
+	}
+	
+	/**
+	 * @param searchableFields the searchableFields to set
+	 */
+	public static void setSearchableFields(String sf) {
+		searchableFields.add(sf);
+	}
+	
 	public List getSiteList() {
 		return siteList;
 	}
@@ -16,8 +34,9 @@ public class SitesAction {
 	}
 
 	public String listSites(){
-		System.out.println("Its good...");
-		siteList = BwikiTablesData.getRecords("Place");
+		if(siteList == null) {
+			siteList = BwikiTablesData.getRecords("Place");
+		}		
 		return "success";
 	}
 	

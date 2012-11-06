@@ -12,6 +12,11 @@ public class BowlingAlley extends ParentData{
 	private String contact;
 	private String contactPerson;
 	private String rating;
+	
+	public BowlingAlley() {
+		this.category = "Bowling Alleys";
+	}
+	
 	public int getNo() {
 		return no;
 	}

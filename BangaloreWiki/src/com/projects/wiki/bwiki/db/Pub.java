@@ -10,6 +10,11 @@ public class Pub extends ParentData{
 	private String contact;
 	private int capacity;
 	private String rating;
+	
+	public Pub() {
+		this.category = "Pubs";
+	}
+	
 	public int getNo() {
 		return no;
 	}

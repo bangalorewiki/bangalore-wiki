@@ -1,6 +1,8 @@
 package com.projects.wiki.bwiki;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import com.projects.wiki.bwiki.util.BwikiTablesData;
 
@@ -8,8 +10,26 @@ public class FastFoodActions {
 	
 	private List fastFoodList;
 
+	private static Set<String> searchableFields = new HashSet<String>();
+	
+	/**
+	 * @return the searchableFields
+	 */
+	public static Set<String> getSearchableFields() {
+		return searchableFields;
+	}
+	
+	/**
+	 * @param searchableFields the searchableFields to set
+	 */
+	public static void setSearchableFields(String sf) {
+		searchableFields.add(sf);
+	}
+	
 	public String listSites(){
-		fastFoodList = BwikiTablesData.getRecords("FastFood");
+		if(fastFoodList == null) {
+			fastFoodList = BwikiTablesData.getRecords("FastFood");
+		}
 		System.out.println("Its good..."+fastFoodList.size());
 		
 		return "success";

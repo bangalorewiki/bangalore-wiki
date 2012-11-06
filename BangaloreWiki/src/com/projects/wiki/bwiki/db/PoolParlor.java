@@ -11,6 +11,11 @@ public class PoolParlor extends ParentData{
 	private String address;
 	private int capacity;
 	private String rating;
+	
+	public PoolParlor() {
+		this.category = "Pool Parlors";
+	}
+	
 	public int getNo() {
 		return no;
 	}

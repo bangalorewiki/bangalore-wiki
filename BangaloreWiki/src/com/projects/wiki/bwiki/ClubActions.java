@@ -1,6 +1,8 @@
 package com.projects.wiki.bwiki;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import com.projects.wiki.bwiki.util.BwikiTablesData;
 
@@ -8,8 +10,26 @@ public class ClubActions {
 	
 	private List clubList;
 
+	private static Set<String> searchableFields = new HashSet<String>();
+	
+	/**
+	 * @return the searchableFields
+	 */
+	public static Set<String> getSearchableFields() {
+		return searchableFields;
+	}
+	
+	/**
+	 * @param searchableFields the searchableFields to set
+	 */
+	public static void setSearchableFields(String sf) {
+		searchableFields.add(sf);
+	}
+	
 	public String listSites(){
-		clubList = BwikiTablesData.getRecords("Club");
+		if(clubList == null) {
+			clubList = BwikiTablesData.getRecords("Club");
+		}
 		System.out.println("Its good..."+clubList.size());
 		
 		return "success";

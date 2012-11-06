@@ -3,7 +3,7 @@
  */
 package com.projects.wiki.bwiki.db;
 
-public class Disco{
+public class Disco extends ParentData {
 	private int no;
 	private String name;
 	private String contact_person;
@@ -11,6 +11,11 @@ public class Disco{
 	private String phone_no;
 	private int capacity;
 	private String rating;
+	
+	public Disco() {
+		this.category = "Discos";
+	}
+	
 	public int getNo() {
 		return no;
 	}

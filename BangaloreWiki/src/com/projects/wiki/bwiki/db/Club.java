@@ -13,6 +13,11 @@ public class Club extends ParentData{
 	private String contactPerson;
 	private int members;
 	private String grade;
+	
+	public Club() {
+		this.category = "Clubs";
+	}
+	
 	public int getNo() {
 		return no;
 	}

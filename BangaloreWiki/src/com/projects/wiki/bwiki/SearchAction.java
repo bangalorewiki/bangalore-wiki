@@ -1,6 +1,8 @@
 package com.projects.wiki.bwiki;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -27,6 +29,22 @@ public class SearchAction {
 	
 	private String searchFor;
 
+	private static Set<String> searchableFields = new HashSet<String>();
+	
+	/**
+	 * @return the searchableFields
+	 */
+	public static Set<String> getSearchableFields() {
+		return searchableFields;
+	}
+	
+	/**
+	 * @param searchableFields the searchableFields to set
+	 */
+	public static void setSearchableFields(String sf) {
+		searchableFields.add(sf);
+	}
+	
 	public String getSearchFor() {
 		return searchFor;
 	}

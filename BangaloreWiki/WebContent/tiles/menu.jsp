@@ -10,7 +10,6 @@
 		$("#menu ul li").click(function(){
 			$("#menu ul li").removeClass("onmenu");
 			$(this).addClass("onmenu");
-			alert("bwiki/"+$(this).attr("id")+"/search");
 			$("#content-section").load("../bwiki/"+$(this).attr("id")+"/demo");
 			
 		});

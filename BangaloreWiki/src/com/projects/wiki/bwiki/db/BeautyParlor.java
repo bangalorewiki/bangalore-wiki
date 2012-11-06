@@ -12,6 +12,10 @@ public class BeautyParlor extends ParentData{
 	private int foot_falls;
 	private String remarks;
 	
+	public BeautyParlor() {
+		this.category = "Beauty Parlors";
+	}
+	
 	public int getNo() {
 		return no;
 	}

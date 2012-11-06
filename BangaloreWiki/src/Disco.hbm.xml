@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated Oct 23, 2012 5:57:22 PM by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="com.projects.wiki.bwiki.db.Disco" table="DISCO">
+    <class name="com.projects.wiki.bwiki.db.Disco" table="DISCOS">
         <id name="no" type="int">
             <column name="NO" />
             <generator class="assigned" />

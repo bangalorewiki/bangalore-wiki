@@ -12,6 +12,11 @@ public class Restaurent extends ParentData{
 	private int contact;
 	private String rating;
 	private String footfalls;
+	
+	public Restaurent() {
+		this.category = "Restaurants";
+	}
+	
 	public int getNo() {
 		return no;
 	}

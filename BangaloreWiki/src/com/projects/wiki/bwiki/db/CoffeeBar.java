@@ -10,6 +10,11 @@ public class CoffeeBar extends ParentData{
 	private String contact;
 	private String contactPerson;
 	private String rating;
+	
+	public CoffeeBar() {
+		this.category = "Coffee Bars";
+	}
+	
 	public int getNo() {
 		return no;
 	}

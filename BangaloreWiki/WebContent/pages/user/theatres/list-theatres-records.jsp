@@ -10,8 +10,9 @@
 			<td class="records-cell-label">Address :</td><td class="records-cell-value">${theatre.address}</td>
 			<td class="records-cell-label">Pincode :</td><td class="records-cell-value">${theatre.pin_code}</td>
 		<tr><td class="records-cell-label">Contact :</td><td class="records-cell-value">${theatre.contact_number}</td>
-			<td class="records-cell-label">Contact Persion :</td><td class="records-cell-value">${theatre.contact_person}</td>
+			<td class="records-cell-label">Contact Person:</td><td class="records-cell-value">${theatre.contact_person}</td>
 			<td class="records-cell-label">Language :</td><td class="records-cell-value">${theatre.language}</td>
+		<tr><td class="records-cell-label">Rating :</td><td class="records-cell-value">${theatre.rating}</td>
 	</table>
 </div>
 </c:forEach>

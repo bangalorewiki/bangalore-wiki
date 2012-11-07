@@ -41,6 +41,9 @@
         <action name="type" method="orderByPlaceType" class="searchAction">
             <result name="success" type="redirect">display</result>
         </action>
+        <action name="name" method="listSites" class="searchAction">
+            <result name="success" type="redirect">display</result>
+        </action>
         <action name="display" method="display" class="searchAction">
             <result name="success">/pages/user/sites/list-sites-records.jsp</result>
         </action>
@@ -54,13 +57,13 @@
         <action name="demo" method="listSites" class="theatreActions">
             <result name="success">/pages/user/theatres/list-theatres.jsp</result>
         </action>
-        <action name="nearest" method="orderByDistance" class="theatreActions">
+        <action name="name" method="listSites" class="theatreActions">
             <result name="success" type="redirect">display</result>
         </action>
         <action name="popular" method="orderByRating" class="theatreActions">
             <result name="success" type="redirect">display</result>
         </action>
-        <action name="type" method="orderByPlaceType" class="theatreActions">
+        <action name="language" method="orderByLanguage" class="theatreActions">
             <result name="success" type="redirect">display</result>
         </action>
         <action name="display" method="display" class="theatreActions">
@@ -72,13 +75,13 @@
         <action name="demo" method="listSites" class="discosActions">
             <result name="success">/pages/user/discos/list-discos.jsp</result>
         </action>
-        <action name="nearest" method="orderByDistance" class="discosActions">
+        <action name="name" method="listSites" class="discosActions">
             <result name="success" type="redirect">display</result>
         </action>
         <action name="popular" method="orderByRating" class="discosActions">
             <result name="success" type="redirect">display</result>
         </action>
-        <action name="type" method="orderByPlaceType" class="discosActions">
+        <action name="capacity" method="orderByCapacity" class="discosActions">
             <result name="success" type="redirect">display</result>
         </action>
         <action name="display" method="display" class="discosActions">
@@ -97,13 +100,13 @@
         <action name="demo" method="listSites" class="beautyParlorActions">
             <result name="success">/pages/user/parlors/list-parlors.jsp</result>
         </action>
-        <action name="nearest" method="orderByDistance" class="beautyParlorActions">
+        <action name="name" method="listSites" class="beautyParlorActions">
             <result name="success" type="redirect">display</result>
         </action>
         <action name="popular" method="orderByRating" class="beautyParlorActions">
             <result name="success" type="redirect">display</result>
         </action>
-        <action name="type" method="orderByPlaceType" class="beautyParlorActions">
+        <action name="footfall" method="orderByFootfall" class="beautyParlorActions">
             <result name="success" type="redirect">display</result>
         </action>
         <action name="display" method="display" class="beautyParlorActions">
@@ -116,13 +119,13 @@
         <action name="demo" method="listSites" class="bowlingAlleyActions">
             <result name="success">/pages/user/bowling-alleys/list-bowling-alleys.jsp</result>
         </action>
-        <action name="nearest" method="orderByDistance" class="bowlingAlleyActions">
+        <action name="name" method="listSites" class="bowlingAlleyActions">
             <result name="success" type="redirect">display</result>
         </action>
         <action name="popular" method="orderByRating" class="bowlingAlleyActions">
             <result name="success" type="redirect">display</result>
         </action>
-        <action name="type" method="orderByPlaceType" class="bowlingAlleyActions">
+        <action name="footfall" method="orderByFootfall" class="bowlingAlleyActions">
             <result name="success" type="redirect">display</result>
         </action>
         <action name="display" method="display" class="bowlingAlleyActions">
@@ -135,13 +138,13 @@
         <action name="demo" method="listSites" class="clubActions">
             <result name="success">/pages/user/clubs/list-clubs.jsp</result>
         </action>
-        <action name="nearest" method="orderByDistance" class="clubActions">
+        <action name="name" method="listSites" class="clubActions">
             <result name="success" type="redirect">display</result>
         </action>
         <action name="popular" method="orderByRating" class="clubActions">
             <result name="success" type="redirect">display</result>
         </action>
-        <action name="type" method="orderByPlaceType" class="clubActions">
+        <action name="footfall" method="orderByFootfall" class="clubActions">
             <result name="success" type="redirect">display</result>
         </action>
         <action name="display" method="display" class="clubActions">
@@ -153,13 +156,10 @@
         <action name="demo" method="listSites" class="coffeeBarActions">
             <result name="success">/pages/user/coffee-bars/list-coffee-bars.jsp</result>
         </action>
-        <action name="nearest" method="orderByDistance" class="coffeeBarActions">
+        <action name="name" method="listSites" class="coffeeBarActions">
             <result name="success" type="redirect">display</result>
         </action>
         <action name="popular" method="orderByRating" class="coffeeBarActions">
-            <result name="success" type="redirect">display</result>
-        </action>
-        <action name="type" method="orderByPlaceType" class="coffeeBarActions">
             <result name="success" type="redirect">display</result>
         </action>
         <action name="display" method="display" class="coffeeBarActions">
@@ -171,13 +171,13 @@
         <action name="demo" method="listSites" class="fastFoodActions">
             <result name="success">/pages/user/fast-foods/list-fast-foods.jsp</result>
         </action>
-        <action name="nearest" method="orderByDistance" class="fastFoodActions">
+        <action name="name" method="listSites" class="fastFoodActions">
             <result name="success" type="redirect">display</result>
         </action>
         <action name="popular" method="orderByRating" class="fastFoodActions">
             <result name="success" type="redirect">display</result>
         </action>
-        <action name="type" method="orderByPlaceType" class="fastFoodActions">
+        <action name="footfall" method="orderByFootfall" class="fastFoodActions">
             <result name="success" type="redirect">display</result>
         </action>
         <action name="display" method="display" class="fastFoodActions">
@@ -189,13 +189,13 @@
         <action name="demo" method="listSites" class="poolParlorActions">
             <result name="success">/pages/user/pool-parlors/list-pool-parlors.jsp</result>
         </action>
-        <action name="nearest" method="orderByDistance" class="poolParlorActions">
+        <action name="name" method="listSites" class="poolParlorActions">
             <result name="success" type="redirect">display</result>
         </action>
         <action name="popular" method="orderByRating" class="poolParlorActions">
             <result name="success" type="redirect">display</result>
         </action>
-        <action name="type" method="orderByPlaceType" class="poolParlorActions">
+        <action name="capacity" method="orderByCapacity" class="poolParlorActions">
             <result name="success" type="redirect">display</result>
         </action>
         <action name="display" method="display" class="poolParlorActions">
@@ -207,13 +207,13 @@
         <action name="demo" method="listSites" class="pizzaJointActions">
             <result name="success">/pages/user/pizza-joints/list-pizza-joints.jsp</result>
         </action>
-        <action name="nearest" method="orderByDistance" class="pizzaJointActions">
+        <action name="name" method="listSites" class="pizzaJointActions">
             <result name="success" type="redirect">display</result>
         </action>
         <action name="popular" method="orderByRating" class="pizzaJointActions">
             <result name="success" type="redirect">display</result>
         </action>
-        <action name="type" method="orderByPlaceType" class="pizzaJointActions">
+        <action name="capacity" method="orderByCapacity" class="pizzaJointActions">
             <result name="success" type="redirect">display</result>
         </action>
         <action name="display" method="display" class="pizzaJointActions">
@@ -225,13 +225,13 @@
         <action name="demo" method="listSites" class="pubActions">
             <result name="success">/pages/user/pubs/list-pubs.jsp</result>
         </action>
-        <action name="nearest" method="orderByDistance" class="pubActions">
+        <action name="name" method="listSites" class="pubActions">
             <result name="success" type="redirect">display</result>
         </action>
         <action name="popular" method="orderByRating" class="pubActions">
             <result name="success" type="redirect">display</result>
         </action>
-        <action name="type" method="orderByPlaceType" class="pubActions">
+        <action name="capacity" method="orderByCapacity" class="pubActions">
             <result name="success" type="redirect">display</result>
         </action>
         <action name="display" method="display" class="pubActions">

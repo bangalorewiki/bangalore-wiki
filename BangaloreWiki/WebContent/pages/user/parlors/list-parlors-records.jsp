@@ -10,8 +10,9 @@
 			<td class="records-cell-label">Address :</td><td class="records-cell-value">${parlor.address}</td>
 			<td class="records-cell-label">Email :</td><td class="records-cell-value">${parlor.email}</td>
 		<tr><td class="records-cell-label">Contact :</td><td class="records-cell-value">${parlor.contact}</td>
-			<td class="records-cell-label">Capacity :</td><td class="records-cell-value">${parlor.foot_falls}</td>
+			<td class="records-cell-label">Footfall :</td><td class="records-cell-value">${parlor.foot_falls}</td>
 			<td class="records-cell-label">Remarks :</td><td class="records-cell-value">${parlor.remarks}</td>
+		<tr><td class="records-cell-label">Rating :</td><td class="records-cell-value">${parlor.rating}</td>
 	</table>
 </div>
 </c:forEach>

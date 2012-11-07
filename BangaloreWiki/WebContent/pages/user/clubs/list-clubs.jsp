@@ -17,6 +17,9 @@
         $("#format").buttonset();
         $("#records-section").load("../bwiki/clubs/display");
 
+        $("#format input").click(function(){
+        	$("#records-section").load("../bwiki/clubs/"+$(this).attr("id"));
+        });
     });
     </script>
     
@@ -30,9 +33,9 @@
 	</table>
 	</div>
    <div id="format">
-       <input type="radio" id="nearest" name="radio" /><label for="nearest">Pincode</label>
-       <input type="radio" id="popular" name="radio" checked="checked" /><label for="popular">Popular</label>
-       <input type="radio" id="type" name="radio" /><label for="type">Language</label>
+       <input type="radio" id="name" name="radio" checked="checked" /><label for="name">Name</label>
+       <input type="radio" id="popular" name="radio"/><label for="popular">Popular</label>
+       <input type="radio" id="footfall" name="radio" /><label for="footfall">Footfall</label>
    </div>
 	<div id="records-section">
 	</div>

@@ -4,6 +4,8 @@
  */
 package com.projects.wiki.bwiki.db;
 
+import java.util.Comparator;
+
 public class Club extends ParentData{
 	private int no;
 	private String name;
@@ -67,5 +69,38 @@ public class Club extends ParentData{
 		this.grade = grade;
 	}
 	
+	public static Comparator<Club> NameComparator = new Comparator<Club>() {
+		public int compare(Club p1, Club p2) {
+			String str1 = p1.getName().toUpperCase();
+			String str2 = p2.getName().toUpperCase();
+			// ascending order
+			return str1.compareTo(str2);
+		}
+	};
 	
+	public static Comparator<Club> FootfallComparator = new Comparator<Club>() {
+		public int compare(Club p1, Club p2) {
+			
+			int i1 = p1.getMembers();
+			int i2 = p2.getMembers();
+			// ascending order
+			if(i1 > i2)
+	            return 1;
+	        else if(i1 < i2)
+	            return -1;
+	        else
+	            return 0;
+		}
+	};
+	
+	public static Comparator<Club> RatingComparator = new Comparator<Club>() {
+		public int compare(Club p1, Club p2) {
+			System.out.println();
+			String str1 = p1.getGrade().toUpperCase();
+			String str2 = p2.getGrade().toUpperCase();
+			System.out.println(str1);
+			// ascending order
+			return str1.compareTo(str2);
+		}
+	};	
 }

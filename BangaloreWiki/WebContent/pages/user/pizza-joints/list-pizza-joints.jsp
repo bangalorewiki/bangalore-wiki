@@ -12,11 +12,17 @@
     </style>
     <script type="text/javascript">
     $(function() {
-        $("#search-submit1").button();
+    	$("#search-submit1").button();
 
         $("#format").buttonset();
         $("#records-section").load("../bwiki/pizza-joints/display");
+
+        $("#format input").click(function(){
+        	$("#records-section").load("../bwiki/pizza-joints/"+$(this).attr("id"));
+        	//$("#content-section").load("../bwiki/sites/display");
+        });
     });
+    
     </script>
     
 	<div id="pizza-joints-form">
@@ -29,9 +35,9 @@
 	</table>
 	</div>
    <div id="format">
-       <input type="radio" id="nearest" name="radio" /><label for="nearest">Pincode</label>
-       <input type="radio" id="popular" name="radio" checked="checked" /><label for="popular">Popular</label>
-       <input type="radio" id="type" name="radio" /><label for="type">Language</label>
+       <input type="radio" id="name" name="radio" checked="checked" /><label for="name">Name</label>
+       <input type="radio" id="popular" name="radio"/><label for="popular">Popular</label>
+       <input type="radio" id="capacity" name="radio" /><label for="capacity">Capacity</label>
    </div>
 	<div id="records-section">
 	</div>

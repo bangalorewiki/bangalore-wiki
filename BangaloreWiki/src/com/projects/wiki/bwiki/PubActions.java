@@ -1,9 +1,12 @@
 package com.projects.wiki.bwiki;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import com.projects.wiki.bwiki.db.Place;
+import com.projects.wiki.bwiki.db.Pub;
 import com.projects.wiki.bwiki.util.BwikiTablesData;
 
 public class PubActions {
@@ -38,23 +41,27 @@ public class PubActions {
 		if(pubList == null) {
 			pubList = BwikiTablesData.getRecords("Pub");
 		}
+		Collections.sort(pubList, Pub.NameComparator);
 		System.out.println("Its good...(Pub) "+pubList.size());
 		
 		return "success";
 	}
 	
-	public String orderByDistance(){
-		System.out.println("Ordering by distance ...");
-		return "success";
-	}
-	
 	public String orderByRating(){
 		System.out.println("Ordering by Rating ...");
+		if(pubList == null) {
+			pubList = BwikiTablesData.getRecords("Pub");
+		}
+		Collections.sort(pubList, Pub.RatingComparator);
 		return "success";
 	}
 	
-	public String orderByPlaceType(){
-		System.out.println("Ordering by PlaceType ...");
+	public String orderByCapacity(){
+		System.out.println("Ordering by Capacity...");
+		if(pubList == null) {
+			pubList = BwikiTablesData.getRecords("Pub");
+		}
+		Collections.sort(pubList, Pub.CapacityComparator);
 		return "success";
 	}
 	

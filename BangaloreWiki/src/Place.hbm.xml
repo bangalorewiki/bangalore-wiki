@@ -44,5 +44,8 @@
         <property name="to_period" type="java.lang.String">
             <column name="to_period" />
         </property>
+        <property name="rating" type="java.lang.String">
+            <column name="rating" />
+        </property>
     </class>
 </hibernate-mapping>

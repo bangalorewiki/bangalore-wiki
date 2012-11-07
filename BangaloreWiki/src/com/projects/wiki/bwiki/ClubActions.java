@@ -1,9 +1,12 @@
 package com.projects.wiki.bwiki;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import com.projects.wiki.bwiki.db.Club;
+import com.projects.wiki.bwiki.db.FastFood;
 import com.projects.wiki.bwiki.util.BwikiTablesData;
 
 public class ClubActions {
@@ -30,6 +33,7 @@ public class ClubActions {
 		if(clubList == null) {
 			clubList = BwikiTablesData.getRecords("Club");
 		}
+		Collections.sort(clubList, Club.NameComparator);
 		System.out.println("Its good..."+clubList.size());
 		
 		return "success";
@@ -42,19 +46,22 @@ public class ClubActions {
 	public void setClubList(List clubList) {
 		this.clubList = clubList;
 	}
-
-	public String orderByDistance(){
-		System.out.println("Ordering by distance ...");
-		return "success";
-	}
 	
 	public String orderByRating(){
 		System.out.println("Ordering by Rating ...");
+		if(clubList == null) {
+			clubList = BwikiTablesData.getRecords("Club");
+		}
+		Collections.sort(clubList, Club.RatingComparator);
 		return "success";
 	}
 	
-	public String orderByPlaceType(){
+	public String orderByFootfall(){
 		System.out.println("Ordering by PlaceType ...");
+		if(clubList == null) {
+			clubList = BwikiTablesData.getRecords("Club");
+		}
+		Collections.sort(clubList, Club.FootfallComparator);
 		return "success";
 	}
 	

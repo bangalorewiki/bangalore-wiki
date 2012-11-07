@@ -9,7 +9,7 @@
 		<td class="records-cell-label">Name :</td><td class="records-cell-value">${CoffeeBar.name}</td>
 		<td class="records-cell-label">Address :</td><td class="records-cell-value">${CoffeeBar.address}</td>
 		<td class="records-cell-label">Contact :</td><td class="records-cell-value">${CoffeeBar.contact}</td>
-		<td class="records-cell-label">Capacity :</td><td class="records-cell-value">${CoffeeBar.contactPerson}</td>
+		<td class="records-cell-label">Footfall :</td><td class="records-cell-value">${CoffeeBar.contactPerson}</td>
 		<td class="records-cell-label">Rating :</td><td class="records-cell-value">${CoffeeBar.rating}</td>
 	</table>
 </div>

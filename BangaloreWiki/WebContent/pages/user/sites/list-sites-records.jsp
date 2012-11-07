@@ -31,6 +31,7 @@
 			<td class="records-cell-label">Period From :</td><td class="records-cell-value">${site.from_period}</td>
 		<tr><td class="records-cell-label">Period To :</td><td class="records-cell-value">${site.to_period}</td>
 			<td class="records-cell-label">Days Required :</td><td class="records-cell-value">${site.days_reqd}</td>
+			<td class="records-cell-label">Rating :</td><td class="records-cell-value">${site.rating}</td>
 	</table>
 	<div class="record-side-option">
 		<img id="sm-fb" class="sm-fb" alt="Post on Facebook" src="../images/facebook-logo-square.png">

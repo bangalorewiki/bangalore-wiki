@@ -4,6 +4,8 @@
  */
 package com.projects.wiki.bwiki.db;
 
+import java.util.Comparator;
+
 public class FastFood extends ParentData{
 	private int no;
 	private String name;
@@ -66,5 +68,39 @@ public class FastFood extends ParentData{
 	public void setContactPerson(String contactPerson) {
 		this.contactPerson = contactPerson;
 	}
+	
+	public static Comparator<FastFood> NameComparator = new Comparator<FastFood>() {
+		public int compare(FastFood p1, FastFood p2) {
+			String str1 = p1.getName().toUpperCase();
+			String str2 = p2.getName().toUpperCase();
+			// ascending order
+			return str1.compareTo(str2);
+		}
+	};
+	
+	public static Comparator<FastFood> FootfallComparator = new Comparator<FastFood>() {
+		public int compare(FastFood p1, FastFood p2) {
+			
+			int i1 = p1.getFootfalls();
+			int i2 = p2.getFootfalls();
+			// ascending order
+			if(i1 > i2)
+	            return 1;
+	        else if(i1 < i2)
+	            return -1;
+	        else
+	            return 0;
+		}
+	};
+	
+	public static Comparator<FastFood> RatingComparator = new Comparator<FastFood>() {
+		public int compare(FastFood p1, FastFood p2) {
+			
+			String str1 = p1.getRating().toUpperCase();
+			String str2 = p2.getRating().toUpperCase();
+			// ascending order
+			return str1.compareTo(str2);
+		}
+	};
 	
 }

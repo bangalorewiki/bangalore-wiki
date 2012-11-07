@@ -3,6 +3,8 @@
  */
 package com.projects.wiki.bwiki.db;
 
+import java.util.Comparator;
+
 public class PizzaJoint extends ParentData{
 	private int no;
 	private String name;
@@ -51,5 +53,37 @@ public class PizzaJoint extends ParentData{
 	public void setRating(String rating) {
 		this.rating = rating;
 	}
+	public static Comparator<PizzaJoint> NameComparator = new Comparator<PizzaJoint>() {
+		public int compare(PizzaJoint p1, PizzaJoint p2) {
+			String str1 = p1.getName().toUpperCase();
+			String str2 = p2.getName().toUpperCase();
+			// ascending order
+			return str1.compareTo(str2);
+		}
+	};
 	
+	public static Comparator<PizzaJoint> CapacityComparator = new Comparator<PizzaJoint>() {
+		public int compare(PizzaJoint p1, PizzaJoint p2) {
+			
+			int i1 = p1.getCapacity();
+			int i2 = p2.getCapacity();
+			// ascending order
+			if(i1 > i2)
+	            return 1;
+	        else if(i1 < i2)
+	            return -1;
+	        else
+	            return 0;
+		}
+	};
+	
+	public static Comparator<PizzaJoint> RatingComparator = new Comparator<PizzaJoint>() {
+		public int compare(PizzaJoint p1, PizzaJoint p2) {
+			
+			String str1 = p1.getRating().toUpperCase();
+			String str2 = p2.getRating().toUpperCase();
+			// ascending order
+			return str1.compareTo(str2);
+		}
+	};
 }

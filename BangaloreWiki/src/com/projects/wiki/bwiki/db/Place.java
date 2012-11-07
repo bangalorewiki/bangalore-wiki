@@ -3,6 +3,8 @@
  */
 package com.projects.wiki.bwiki.db;
 
+import java.util.Comparator;
+
 /**
  * @author ntallapa
  *
@@ -247,6 +249,65 @@ public class Place extends ParentData{
 		this.to_period = to_period;
 	}
 	
-	
+	public static Comparator<Place> PlaceTypeComparator = new Comparator<Place>() {
+		public int compare(Place p1, Place p2) {
+			String pType1 = p1.getType().toUpperCase();
+			String pType2 = p2.getType().toUpperCase();
+			// ascending order
+			return pType1.compareTo(pType2);
+		}
+	};
 
+	public static Comparator<Place> PlaceDistanceComparator = new Comparator<Place>() {
+		public int compare(Place p1, Place p2) {
+			int i1 = p1.getDist();
+			int i2 = p2.getDist();
+			// ascending order
+			if(i1 > i2)
+	            return 1;
+	        else if(i1 < i2)
+	            return -1;
+	        else
+	            return 0;    
+		}
+	};
+
+	public static Comparator<Place> PlaceNameComparator = new Comparator<Place>() {
+		public int compare(Place p1, Place p2) {
+			String str1 = p1.getName().toUpperCase();
+			String str2 = p2.getName().toUpperCase();
+			// ascending order
+			return str1.compareTo(str2);
+		}
+	};
+
+	public static Comparator<Place> PlaceDaysReqdComparator = new Comparator<Place>() {
+		public int compare(Place p1, Place p2) {
+			int i1 = p1.getDays_reqd();
+			int i2 = p2.getDays_reqd();
+			// ascending order
+			if(i1 > i2)
+	            return 1;
+	        else if(i1 < i2)
+	            return -1;
+	        else
+	            return 0;    
+		}
+	};
+	
+	public static Comparator<Place> PlaceRatingComparator = new Comparator<Place>() {
+		public int compare(Place p1, Place p2) {
+			
+			int i1 = Integer.parseInt(p1.getRating());
+			int i2 = Integer.parseInt(p2.getRating());
+			
+			// ascending order
+			if(i1 < i2)
+	            return 1;
+	        else if(i1 > i2)
+	            return -1;
+	        else
+	            return 0;
+		}
+	};
 }

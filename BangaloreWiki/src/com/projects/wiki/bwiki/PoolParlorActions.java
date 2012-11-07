@@ -1,9 +1,12 @@
 package com.projects.wiki.bwiki;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import com.projects.wiki.bwiki.db.PoolParlor;
+import com.projects.wiki.bwiki.db.Pub;
 import com.projects.wiki.bwiki.util.BwikiTablesData;
 
 public class PoolParlorActions {
@@ -38,23 +41,27 @@ public class PoolParlorActions {
 		if(poolParlorList == null) {
 			poolParlorList = BwikiTablesData.getRecords("PoolParlor");
 		}
+		Collections.sort(poolParlorList, PoolParlor.NameComparator);
 		System.out.println("Its good..."+poolParlorList.size());
 		
 		return "success";
 	}
 	
-	public String orderByDistance(){
+	public String orderByCapacity(){
 		System.out.println("Ordering by distance ...");
+		if(poolParlorList == null) {
+			poolParlorList = BwikiTablesData.getRecords("PoolParlor");
+		}
+		Collections.sort(poolParlorList, PoolParlor.CapacityComparator);
 		return "success";
 	}
 	
 	public String orderByRating(){
 		System.out.println("Ordering by Rating ...");
-		return "success";
-	}
-	
-	public String orderByPlaceType(){
-		System.out.println("Ordering by PlaceType ...");
+		if(poolParlorList == null) {
+			poolParlorList = BwikiTablesData.getRecords("PoolParlor");
+		}
+		Collections.sort(poolParlorList, PoolParlor.RatingComparator);
 		return "success";
 	}
 	

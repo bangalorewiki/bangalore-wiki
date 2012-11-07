@@ -3,6 +3,8 @@
  */
 package com.projects.wiki.bwiki.db;
 
+import java.util.Comparator;
+
 public class CoffeeBar extends ParentData{
 	private int no;
 	private String name;
@@ -51,4 +53,23 @@ public class CoffeeBar extends ParentData{
 	public void setRating(String rating) {
 		this.rating = rating;
 	}
+	
+	public static Comparator<CoffeeBar> NameComparator = new Comparator<CoffeeBar>() {
+		public int compare(CoffeeBar p1, CoffeeBar p2) {
+			String str1 = p1.getName().toUpperCase();
+			String str2 = p2.getName().toUpperCase();
+			// ascending order
+			return str1.compareTo(str2);
+		}
+	};
+	
+	public static Comparator<CoffeeBar> RatingComparator = new Comparator<CoffeeBar>() {
+		public int compare(CoffeeBar p1, CoffeeBar p2) {
+			
+			String str1 = p1.getRating().toUpperCase();
+			String str2 = p2.getRating().toUpperCase();
+			// ascending order
+			return str1.compareTo(str2);
+		}
+	};
 }

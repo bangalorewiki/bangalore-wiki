@@ -1,9 +1,11 @@
 package com.projects.wiki.bwiki;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import com.projects.wiki.bwiki.db.FastFood;
 import com.projects.wiki.bwiki.util.BwikiTablesData;
 
 public class FastFoodActions {
@@ -30,6 +32,7 @@ public class FastFoodActions {
 		if(fastFoodList == null) {
 			fastFoodList = BwikiTablesData.getRecords("FastFood");
 		}
+		Collections.sort(fastFoodList, FastFood.NameComparator);
 		System.out.println("Its good..."+fastFoodList.size());
 		
 		return "success";
@@ -43,18 +46,21 @@ public class FastFoodActions {
 		this.fastFoodList = fastFoodList;
 	}
 
-	public String orderByDistance(){
-		System.out.println("Ordering by distance ...");
-		return "success";
-	}
-	
 	public String orderByRating(){
 		System.out.println("Ordering by Rating ...");
+		if(fastFoodList == null) {
+			fastFoodList = BwikiTablesData.getRecords("FastFood");
+		}
+		Collections.sort(fastFoodList, FastFood.RatingComparator);
 		return "success";
 	}
 	
-	public String orderByPlaceType(){
+	public String orderByFootfall(){
 		System.out.println("Ordering by PlaceType ...");
+		if(fastFoodList == null) {
+			fastFoodList = BwikiTablesData.getRecords("FastFood");
+		}
+		Collections.sort(fastFoodList, FastFood.FootfallComparator);
 		return "success";
 	}
 	

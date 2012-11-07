@@ -1,9 +1,11 @@
 package com.projects.wiki.bwiki;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import com.projects.wiki.bwiki.db.CoffeeBar;
 import com.projects.wiki.bwiki.util.BwikiTablesData;
 
 public class CoffeeBarActions {
@@ -38,23 +40,18 @@ public class CoffeeBarActions {
 		if(coffeeBarList == null) {
 			coffeeBarList = BwikiTablesData.getRecords("CoffeeBar");
 		}
+		Collections.sort(coffeeBarList, CoffeeBar.NameComparator);
 		System.out.println("Its good..."+coffeeBarList.size());
 		
 		return "success";
 	}
 	
-	public String orderByDistance(){
-		System.out.println("Ordering by distance ...");
-		return "success";
-	}
-	
 	public String orderByRating(){
 		System.out.println("Ordering by Rating ...");
-		return "success";
-	}
-	
-	public String orderByPlaceType(){
-		System.out.println("Ordering by PlaceType ...");
+		if(coffeeBarList == null) {
+			coffeeBarList = BwikiTablesData.getRecords("CoffeeBar");
+		}
+		Collections.sort(coffeeBarList, CoffeeBar.RatingComparator);
 		return "success";
 	}
 	

@@ -3,6 +3,8 @@
  */
 package com.projects.wiki.bwiki.db;
 
+import java.util.Comparator;
+
 /**
  * @author ntallapa
  *
@@ -120,6 +122,32 @@ public class Theatre extends ParentData{
 		this.language = language;
 	}
 	
+	public static Comparator<Theatre> NameComparator = new Comparator<Theatre>() {
+		public int compare(Theatre p1, Theatre p2) {
+			String str1 = p1.getName().toUpperCase();
+			String str2 = p2.getName().toUpperCase();
+			// ascending order
+			return str1.compareTo(str2);
+		}
+	};
 	
+	public static Comparator<Theatre> RatingComparator = new Comparator<Theatre>() {
+		public int compare(Theatre p1, Theatre p2) {
+			
+			String str1 = p1.getRating().toUpperCase();
+			String str2 = p2.getRating().toUpperCase();
+			// ascending order
+			return str1.compareTo(str2);
+		}
+	};
+	
+	public static Comparator<Theatre> LanguageComparator = new Comparator<Theatre>() {
+		public int compare(Theatre p1, Theatre p2) {
+			String str1 = p1.getLanguage().toUpperCase();
+			String str2 = p2.getLanguage().toUpperCase();
+			// ascending order
+			return str1.compareTo(str2);
+		}
+	};
 
 }

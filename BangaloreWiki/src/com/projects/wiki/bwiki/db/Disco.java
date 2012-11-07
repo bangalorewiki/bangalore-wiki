@@ -3,6 +3,8 @@
  */
 package com.projects.wiki.bwiki.db;
 
+import java.util.Comparator;
+
 public class Disco extends ParentData {
 	private int no;
 	private String name;
@@ -58,4 +60,39 @@ public class Disco extends ParentData {
 	public void setRating(String rating) {
 		this.rating = rating;
 	}
+	
+	public static Comparator<Disco> NameComparator = new Comparator<Disco>() {
+		public int compare(Disco p1, Disco p2) {
+			String str1 = p1.getName().toUpperCase();
+			String str2 = p2.getName().toUpperCase();
+			// ascending order
+			return str1.compareTo(str2);
+		}
+	};
+	
+	public static Comparator<Disco> CapacityComparator = new Comparator<Disco>() {
+		public int compare(Disco p1, Disco p2) {
+			
+			int i1 = p1.getCapacity();
+			int i2 = p2.getCapacity();
+			
+			// ascending order
+			if(i1 > i2)
+	            return 1;
+	        else if(i1 < i2)
+	            return -1;
+	        else
+	            return 0;
+		}
+	};
+	
+	public static Comparator<Disco> RatingComparator = new Comparator<Disco>() {
+		public int compare(Disco p1, Disco p2) {
+			
+			String str1 = p1.getRating().toUpperCase();
+			String str2 = p2.getRating().toUpperCase();
+			// ascending order
+			return str1.compareTo(str2);
+		}
+	};
 }

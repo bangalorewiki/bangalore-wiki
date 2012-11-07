@@ -18,8 +18,8 @@
         $("#records-section").load("../bwiki/sites/display");
 
         $("#format input").click(function(){
-        	//$("#records-section").load("bwiki/sites/"+$(this).attr("id"));
-        	$("#content-section").load("../bwiki/sites/display");
+        	$("#records-section").load("../bwiki/sites/"+$(this).attr("id"));
+        	//$("#content-section").load("../bwiki/sites/display");
         });
     });
     </script>
@@ -38,8 +38,9 @@
 
     
 	<div id="format">
-        <input type="radio" id="nearest" name="radio" /><label for="nearest">Nearest First</label>
-        <input type="radio" id="popular" name="radio" checked="checked" /><label for="popular">Popular</label>
+		<input type="radio" id="name" name="radio" checked="checked" /><label for="name">Name</label>
+        <input type="radio" id="nearest" name="radio"/><label for="nearest">Nearest</label>
+        <input type="radio" id="popular" name="radio"/><label for="popular">Popular</label>
         <input type="radio" id="type" name="radio" /><label for="type">Type</label>
     </div>
    
